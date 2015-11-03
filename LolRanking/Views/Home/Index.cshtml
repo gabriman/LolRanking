@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div ng-controller="homeController" ng-init="init()">
+    <form>
+        @Html.TextBox("Name", "", new { @class = "form-control", @ng_model = "summonerName" })
+        <button type="submit" ng-click="buscar()">Buscar</button>
+    </form>
+    <hr />
+
+    <img src="~/Content/Images/gif-load.gif" alt="Loading" ng-show="loading" class="loadspin" />
+
+    <div class="contenido" ng-show="friends">
+        <div class="row">
+            <ul class="list-inline col-md-12">
+                <li ng-repeat="champ in champions | orderBy:'name'">
+                    <img ng-src="{{champ.img}}" class="img-rounded img-champion" ng-class="{true:'low-opacity'}[champ.disabled]" alt="Responsive image" height="42" width="42" ng-click="selectChampion(champ)">
+                </li>
+            </ul>
+        </div>
+
+        {{count}}
+        <table class="table table-bordered ranking" ng-show="friends" ng-show="friends.length>0">
+            <thead>
+                <tr>
+                    <th class="col-md-6">Nombre</th>
+                    <th class="col-md-6">
+                        <span ng-show="orderProp === 'totalMinionKills_byGame'">MinionsKilledByGame</span>
+                        <span ng-show="orderProp === 'totalPentakills'">Penta</span>
+                        <span ng-show="orderProp === 'kda'">KDA</span>
+                        <span ng-show="orderProp === 'winrate'">WinRate</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="friend in friends | filter: filterNameEmpty | orderBy: orderProp:reverse" 
+                    class="friend" ng-class="{danger:friend.name=={{summonerName}}}">
+                    <td>
+                        <img ng-src="{{friend.urlImage}}" class="img-rounded img-champion" height="32" width="32">
+                        <b>{{friend.name}}</b>
+                    </td>
+                    <td>
+                        <span ng-show="orderProp === 'totalMinionKills_byGame'">{{friend.totalMinionKills_byGame | number }} </span>
+                        <span ng-show="orderProp === 'totalPentakills'">{{friend.totalPentakills}}</span>
+                        <span ng-show="orderProp === 'kda'">{{friend.kda | number}}</span>
+                        <span ng-show="orderProp === 'winrate'">{{friend.winrate | percentage}}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button ng-click="order('totalMinionKills_byGame')">Ordenar por totalMinionKills_byGame</button>
+        <button ng-click="order('totalPentakills')">Ordenar por Pentakill</button>
+        <button ng-click="order('kda')">KDA</button>
+        <button ng-click="order('winrate')">WinRate</button>
+
+    </div>
+
+</div>
+
+
+
+
+@section scripts {
+    <script src="@Url.Content("~/Scripts/app/app.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/app/controllers/HomeController.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/app/services/ApiService.js")" type="text/javascript"></script>
+}
+

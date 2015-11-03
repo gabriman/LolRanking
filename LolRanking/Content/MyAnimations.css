@@ -1,0 +1,118 @@
+﻿.texto {
+    -webkit-transition: all linear 1s;
+    transition: all linear 1s;
+}
+
+    .texto.ng-hide {
+        opacity: 0;
+    }
+
+.loadspin {
+    -webkit-transition: all linear 2s;
+    transition: all linear 2s;
+}
+
+    .loadspin.ng-hide {
+        opacity: 0;
+    }
+
+.contenido {
+    -webkit-transition: all linear 2s;
+    transition: all linear 2s;
+}
+
+    .contenido.ng-hide {
+        opacity: 0;
+    }
+
+
+/*.friend {
+  -webkit-transition: color 0.6s, background-color 0.3s;
+  -moz-transition: color 0.6s, background-color 0.3s;
+  -ms-transition: color 0.6s, background-color 0.3s;
+  transition: color 0.6s, background-color 0.3s;
+}
+.friend.ng-enter {
+    opacity: 1;
+}
+.friend.ng-leave {
+    opacity: 0;
+}*/
+
+
+.friend {
+    line-height: 40px;
+    list-style: none;
+    box-sizing: border-box;
+}
+    /*
+.friend.ng-move,
+.friend.ng-enter{
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+.friend.ng-leave {
+  -webkit-transition:all linear 0.2s;
+  transition:all linear 0.2s;
+}
+
+.friend.ng-leave.ng-leave-active,
+.friend.ng-move,
+.friend.ng-enter {
+  opacity:0;
+  max-height:0;
+}
+
+.friend.ng-leave,
+.friend.ng-move.ng-move-active,
+.friend.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:40px;
+}*/
+
+
+    .friend.ng-enter-stagger,
+    .friend.ng-leave-stagger {
+        -webkit-transition-delay: 0.1s;
+        -moz-transition-delay: 0.1s;
+        -ms-transition-delay: 0.1s;
+        -o-transition-delay: 0.1s;
+        transition-delay: 0.1s;
+        -webkit-transition-duration: 0;
+        -moz-transition-duration: 0;
+        -ms-transition-duration: 0;
+        -o-transition-duration: 0;
+        transition-duration: 0;
+    }
+
+    .friend.ng-enter {
+        -webkit-transition: 0.1s linear all;
+        -moz-transition: 0.1s linear all;
+        -ms-transition: 0.1s linear all;
+        -o-transition: 0.1s linear all;
+        transition: 0.1s linear all;
+        -ms-opacity: 0;
+        opacity: 0;
+    }
+
+
+        .friend.ng-enter.ng-enter-active {
+            -ms-opacity: 1;
+            opacity: 1;
+        }
+
+    .friend.ng-move {
+        -webkit-transition: 0.1s linear all;
+        -moz-transition: 0.1s linear all;
+        -ms-transition: 0.1s linear all;
+        -o-transition: 0.1s linear all;
+        transition: 0.1s linear all;
+        -ms-opacity: 0;
+        opacity: 0;
+    }
+
+
+    .friend.ng-enter.ng-move-active {
+        -ms-opacity: 1;
+        opacity: 1;
+    }
