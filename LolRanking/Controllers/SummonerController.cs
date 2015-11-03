@@ -110,7 +110,11 @@ namespace FirstSPA.Controllers
 
         private string GetUrlImage(int iconId)
         {
-            return String.Format(Helpers.Config.Read(Config.ConfigKeys.ImagesUrl), iconId);
+            var version = StaticApi.GetVersions(Region.euw);
+            string versionNumber = version.FirstOrDefault();
+            if (versionNumber != null)
+                return String.Format(Config.Read(Config.ConfigKeys.ImagesUrl), versionNumber, iconId);
+            else return "";
         }
 
 

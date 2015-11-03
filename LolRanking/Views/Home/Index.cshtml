@@ -4,7 +4,7 @@
 
 <div ng-controller="homeController" ng-init="init()">
     <form>
-        @Html.TextBox("Name", "", new { @class = "form-control", @ng_model = "summonerName" })
+        @Html.TextBox("Name", "", new { @class = "form-control", @ng_model = "summonerName", placeholder="Username (p.ej: gabriman88)" })
         <button type="submit" ng-click="buscar()">Buscar</button>
     </form>
     <hr />
