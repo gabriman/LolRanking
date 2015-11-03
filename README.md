@@ -7,4 +7,4 @@ SinglePageApp para la creación de clasificaciones de jugadores de League of Leg
 -Aplicación en AngularJS para manejar las vistas. Objetivo de realizar esta parte con las previous versions de AngularJs 2
 
 
-<a href="http://lolranking.azurewebsites.net/">Live DEMO</a>
+<a href="http://lolranking.azurewebsites.net/"><span style="font-size: 30px;">Live DEMO</span></a>
