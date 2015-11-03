@@ -205,6 +205,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\controllers\HomeController.js" />
+    <Content Include="app\services\ApiService.js" />
+    <Content Include="app\services\StaticApiService.js" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\Images\gif-load.gif" />
     <Content Include="Content\MyAnimations.css" />
@@ -221,6 +225,7 @@
     <Content Include="Scripts\app\services\StaticApiService.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\lolranking.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -272,6 +277,7 @@
     <Content Include="Views\Home\Home.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\directives\" />
     <Folder Include="App_Data\" />
     <Folder Include="Scripts\app\directives\" />
     <Folder Include="Views\Base\" />

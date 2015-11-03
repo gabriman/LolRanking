@@ -8,7 +8,12 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.js"></script>
+
 
 </head>
 <body ng-app="app">
@@ -49,10 +54,10 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/Scripts/angular.js")
+    @*@Scripts.Render("~/Scripts/angular.js")
     @Scripts.Render("~/Scripts/angular-route.js")
     @Scripts.Render("~/Scripts/angular-resource.js")
-    @Scripts.Render("~/Scripts/angular-animate.js")
+    @Scripts.Render("~/Scripts/angular-animate.js")*@
     @Scripts.Render("~/Scripts/jsonselect.js")
     @RenderSection("scripts", required: false)
 </body>
